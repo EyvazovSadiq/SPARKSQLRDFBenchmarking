@@ -14,6 +14,6 @@
 
 ### Publication
 #
-Benchmarking Spark-SQL under alliterative RDF Relational Storage Backends have been published in [GitHub](https://www.researchgate.net/publication/335378928_Benchmarking_Spark-SQL_under_alliterative_RDF_Relational_Storage_Backends) 
+Benchmarking Spark-SQL under alliterative RDF Relational Storage Backends have been published in [Researchgate](https://www.researchgate.net/publication/335378928_Benchmarking_Spark-SQL_under_alliterative_RDF_Relational_Storage_Backends) 
 
     M. Ragab, R. Tommasini and S. Sakr, Benchmarking SparkSQL under Alliterative RDF Relational Storage Backends (2019).
