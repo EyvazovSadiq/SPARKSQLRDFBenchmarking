@@ -6,13 +6,28 @@ This repository contains the [code](https://github.com/EyvazovSadiq/SPARKSQLRDFB
 
 In this paper, we drove our experiments using a representative query workloads from theSP2Benchbenchmark scenario. The results of our experiments show many interesting insights about the impact of the **relational encoding scheme**, **relational data partitioning**, **storage backends** and **storage formats** on the performance of the query execution process in the distributed environment of _Spark_.
 
-#### RDF relational schemas
-In this paper, we present a systematiccomparison of three relevant RDF relational schemas, i.e., Single Statement Table (i.e. a single triples table), Property Tables (i.e.n-ary predicate-clustered tables), or Vertically-Partitioned Tables (i.e. a set of two-column tables resulting from predicate-basedpartitioning) queried using Apache Spark. 
+#### RDF Relational schemas
+-----
+We present a systematic comparison of three relevant RDF relational schemas such as _Single Statement Table_, _Property Tables_, and _Vertically-Partitioned Tables_  queried using Apache Spark. 
 
-#### Storage Backends and storage formats
+
+**Single Statement Table** requires  storing RDF datasets in a single triples table of three columns that represent the three components of the RDF triple,i.e.,Subject,Predicate, and Object.
+Figure
+
+**Vertically-Partitioned Tables** is an alterna-tive schema storage in which the RDF triples table is decomposed into a table of two columns (Subject, Object) for each unique property  in  the  RDF  dataset  such  that  the  first  (subject) column contains all subject URIs of that unique property, and the second (object) contains all the object values (URIs and Literals) for those subjects
+Figure
+
+**Property Tables** is proposed to cluster multiple RDF properties as n-ary table columns for the same subject to group entities that are similar instructure.
+Figure
+
+
+
+#### Storage backends and storage formats
+-----
 We evaluate the performance of SparkSQL querying engine for processing SPARQLqueries using two different storage backends, namely, Hive, and HDFS. For the latter one, we compare four different data formats(CSV, ORC, Avro, and Parquet). 
 
 #### Partitioning techniques
+-----
 In addition, we show the impact of using three different RDF-based partitioning techniques with our relational scenario which are Subject-based, Predicate-based, and Horizontal partitioning. 
 
 
