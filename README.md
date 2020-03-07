@@ -6,31 +6,31 @@ This repository contains the [code](https://github.com/EyvazovSadiq/SPARKSQLRDFB
 
 In this paper, we drove our experiments using a representative query workloads from theSP2Benchbenchmark scenario. The results of our experiments show many interesting insights about the impact of the **relational encoding scheme**, **relational data partitioning**, **storage backends** and **storage formats** on the performance of the query execution process in the distributed environment of _Spark_.
 
-#### RDF Relational schemas
+### RDF Relational schemas
 -----
 We present a systematic comparison of three relevant RDF relational schemas such as _Single Statement Table_, _Property Tables_, and _Vertically-Partitioned Tables_  queried using Apache Spark. 
 
 
-**Single Statement Table** requires  storing RDF datasets in a single triples table of three columns that represent the three components of the RDF triple,i.e., Subject, Predicate, and Object.
+**Single Statement Table** requires  storing RDF datasets in a single triples table of three columns that represent the three components of the RDF triple, i.e., Subject, Predicate, and Object.
 
-<img src="https://github.com/EyvazovSadiq/SPARKSQLRDFBenchmarking/blob/master/figures/st.JPG" alt="spark" width="500" height="220">
+<img src="https://github.com/EyvazovSadiq/SPARKSQLRDFBenchmarking/blob/master/figures/st.JPG" alt="spark" width="500" height="200">
 
 **Vertically-Partitioned Tables** is an alterna-tive schema storage in which the RDF triples table is decomposed into a table of two columns (Subject, Object) for each unique property  in  the  RDF  dataset  such  that  the  first  (subject) column contains all subject URIs of that unique property, and the second (object) contains all the object values (URIs and Literals) for those subjects
 
-<img src="https://github.com/EyvazovSadiq/SPARKSQLRDFBenchmarking/blob/master/figures/vt.JPG" alt="spark" width="500" height="220">
+<img src="https://github.com/EyvazovSadiq/SPARKSQLRDFBenchmarking/blob/master/figures/vt.JPG" alt="spark" width="500" height="200">
 
 **Property Tables** is proposed to cluster multiple RDF properties as n-ary table columns for the same subject to group entities that are similar instructure.
 
-<img src="https://github.com/EyvazovSadiq/SPARKSQLRDFBenchmarking/blob/master/figures/pt.JPG" alt="spark" width="500" height="220">
+<img src="https://github.com/EyvazovSadiq/SPARKSQLRDFBenchmarking/blob/master/figures/pt.JPG" alt="spark" width="500" height="200">
 
 
-#### Storage backends and storage formats
+### Storage backends and storage formats
 -----
-We evaluate the performance of SparkSQL querying engine for processing SPARQLqueries using two different storage backends, namely, Hive, and HDFS. For the latter one, we compare four different data formats(CSV, ORC, Avro, and Parquet). 
+We evaluate the performance of SparkSQL querying engine for processing SPARQL queries using two different storage backends, namely, _Hive_, and _HDFS_. For the latter one, we compare four different data formats (_CSV_, _ORC_, _Avro_, and _Parquet_). 
 
-#### Partitioning techniques
+### Partitioning techniques
 -----
-In addition, we show the impact of using three different RDF-based partitioning techniques with our relational scenario which are Subject-based, Predicate-based, and Horizontal partitioning. 
+In addition, we show the impact of using three different RDF-based partitioning techniques with our relational scenario which are _Subject-based_, _Predicate-based_, and _Horizontal partitioning_. 
 
 
 ### RDFBenchmarking Results for Partitioning Techniques Comparison
@@ -41,7 +41,10 @@ In addition, we show the impact of using three different RDF-based partitioning 
 
 
 ### Installation
-#
+
+_[Data Generator](http://dbis.informatik.uni-freiburg.de/index.php?project=SP2B/download.php)_ generates data in N3 format. _[Apache Jena](https://jena.apache.org/download/)_ is used to convert N3 into TDB files, afterwards converting TDB files into CSV relational schemas.
+
+The _SPARQL_ and _SQL_ queries can be found [here](http://dbis.informatik.uni-freiburg.de/index.php?project=SP2B/translations.html)
 
 
 ### Publication
