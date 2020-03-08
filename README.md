@@ -51,17 +51,17 @@ In addition, we show the impact of using three different RDF-based partitioning 
   
 <img src="https://github.com/EyvazovSadiq/SPARKSQLRDFBenchmarking/blob/master/figures/StorageFormats_100M_ST.png" alt="spark" width="250" height="150">       <img src="https://github.com/EyvazovSadiq/SPARKSQLRDFBenchmarking/blob/master/figures/StorageFormats_100M_VT.png" alt="spark" width="250" height="150">       <img src="https://github.com/EyvazovSadiq/SPARKSQLRDFBenchmarking/blob/master/figures/StorageFormats_100M_PT.png" alt="spark" width="250" height="150">
 
-These figures show the comparative representation of partitioning technique's, relational schema's and storage format's performance, accordingly.
+These figures show the comparative representation of partitioning technique's, relational schema's and storage format's performance, accordingly. _The higher Rank Score value, the better performance._
 
 ### Installation
 
-_[Data Generator](http://dbis.informatik.uni-freiburg.de/index.php?project=SP2B/download.php)_ generates data in N3 format. _[Apache Jena](https://jena.apache.org/download/)_ is used to convert N3 into TDB files, afterwards converting TDB files into CSV relational schemas.
+_[Data Generator](http://dbis.informatik.uni-freiburg.de/index.php?project=SP2B/download.php)_ generates Sp2Bench data in N3 triple format. _[Apache Jena](https://jena.apache.org/download/)_ is used to convert N3 into TDB files, afterwards converting TDB files into CSV relational schemas.
 
 The _SPARQL_ and _SQL_ queries can be found [here](http://dbis.informatik.uni-freiburg.de/index.php?project=SP2B/translations.html)
 
 
 ### Publication
-#
+
 Benchmarking Spark-SQL under alliterative RDF Relational Storage Backends have been published in [Researchgate](https://www.researchgate.net/publication/335378928_Benchmarking_Spark-SQL_under_alliterative_RDF_Relational_Storage_Backends) 
 
     M. Ragab, R. Tommasini and S. Sakr, Benchmarking SparkSQL under Alliterative RDF Relational Storage Backends (2019).
